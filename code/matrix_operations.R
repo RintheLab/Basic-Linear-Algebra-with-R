@@ -15,7 +15,7 @@ B <- matrix(c(1, 1, 0, 0, 1, 1, 1, 0, 1), nrow = 3, byrow = TRUE)
 
 A %*% B
 
-# Matrix multiplication by a matrix
+# Matrix multiplication by a scalar
 100 * A
 
 # Rank of a Matrix
@@ -30,12 +30,12 @@ qr(D)$rank
 # Equations:
 # (1): a + b + c = 15
 # (2): 3a + 2b + c = 28
-# (3): 2a + b + 2 c = 23
+# (3): 2a + b + 2c = 23
 
 # Coefficient matrix
 C <- matrix(c(1, 1, 1, 3, 2, 1, 2, 1, 2), nrow = 3, byrow = TRUE)
 
-# Constants 
+# Results vector 
 r <- c(15, 28, 23)
 
 # Coefficient matrix inverse
@@ -56,18 +56,18 @@ diag(5) # 5 X 5
 
 # Eigenvalues and eigenvectors
 A <- matrix(c(3, 4, 0, 5), nrow = 2, byrow = TRUE)
-eA <- eigen(A)
+e_A <- eigen(A)
 
 # Values
-evls <- eA$values
+e_vls <- eA$values
 
 # Vectors
-evects <- eA$vectors
+e_vects <- eA$vectors
 
 # A matrix can be decomposed as:
-evects %*% diag(evls) %*% solve(evects)
+e_vects %*% diag(e_vls) %*% solve(e_vects)
 
-# Gram-Schmidt process with pracma packages
+# Gram-Schmidt process with pracma package
 library(pracma)
 
 A <- matrix(c(2, -2, 18, 2, 1, 0, 1, 2, 0), nrow = 3, byrow = TRUE)
